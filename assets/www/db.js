@@ -337,17 +337,17 @@ function editShopSettings(editName, editUrl, editPin) {
 	var edit = $("#divEditShop");
 	edit.empty();
 	var text=	'<h3>'+editName+'</h3><hr/>'+
-				'<div data-role="fieldcontain">';
-				text += '<label for="'+editName+'addressEdit">Shop address:</label>'+
+				'<div data-role="fieldcontain">'+
+				'<label for="'+editName+'addressEdit">Shop address:</label>'+
 				'<input type="url" name="addressEdit" id="'+editName+'addressEdit" value="'+editUrl+'" placeholder="address" />'+		
-				'<br />';
-				text +='<label for="'+editName+'pinEdit">Pin:</label>'+
-				'<input type="password" name="pinEdit" id="'+editName+'pinEdit" value="'+editPin+'" placeholder="pin" />';
-				text+='</div>'+
-			'<fieldset class="ui-grid-a">'+
-				'<div class="ui-block-a"><button type="submit" data-theme="a" ><a href="#main" data-role="button" onClick="saveEditShopSettings('+"'"+editName+"'"+');">Save</a></button></div>'+	   
-				'<div class="ui-block-b"><button type="submit" data-theme="c"><a href="#settings" data-role="button">Cancel</a></button></div>'+
-			'</fieldset>';
+				'<br />'+
+				'<label for="'+editName+'pinEdit">Pin:</label>'+
+				'<input type="password" name="pinEdit" id="'+editName+'pinEdit" value="'+editPin+'" placeholder="pin" />'+
+				'</div>'+
+				'<fieldset class="ui-grid-a">'+
+					'<div class="ui-block-a"><button type="submit" data-theme="a" ><a href="#main" data-role="button" onClick="saveEditShopSettings('+"'"+editName+"'"+');">Save</a></button></div>'+	   
+					'<div class="ui-block-b"><button type="submit" data-theme="c"><a href="#settings" data-role="button">Cancel</a></button></div>'+
+				'</fieldset>';
 	edit.append(text);
 	edit.trigger("create");
 }
